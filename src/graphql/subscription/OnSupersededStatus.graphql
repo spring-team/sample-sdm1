@@ -1,0 +1,28 @@
+subscription OnSupersededStatus {
+  Status(context: "superseded") {
+    commit {
+      sha
+      message
+      statuses {
+        context
+        description
+        state
+      }
+      repo {
+        owner
+        name
+        channels {
+          team {
+            id
+          }
+          name
+          id
+        }
+      }
+    }
+    state
+    targetUrl
+    context
+    description
+  }
+}

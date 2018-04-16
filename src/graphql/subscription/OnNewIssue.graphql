@@ -1,0 +1,28 @@
+subscription OnIssueAction {
+  Issue {
+    number
+    title
+    body
+    openedBy {
+      login
+      person {
+        name
+        chatId {
+          screenName
+        }
+      }
+    }
+    createdAt
+    updatedAt
+    repo {
+      owner
+      name
+      channels {
+        team {
+          id
+        }
+        name
+      }
+    }
+  }
+}
